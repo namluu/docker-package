@@ -26,6 +26,8 @@ services:
   docker-php-cli:
     build:
       context: ./php-cli
+    ports:
+      - "8000:8000"
     volumes:
       - ./app:/var/www
     networks:
