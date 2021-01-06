@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
         libxslt1-dev \
         libzip-dev \
         zip \
+        npm \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-configure zip
 
@@ -34,4 +35,4 @@ RUN apt-get update && apt-get install -y curl wget && \
 RUN wget https://get.symfony.com/cli/installer -O - | bash
 RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
-CMD bash -c "composer install && symfony server:start"
+RUN npm install -g yarn
