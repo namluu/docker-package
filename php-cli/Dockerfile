@@ -32,7 +32,7 @@ RUN apt-get update && apt-get install -y curl wget && \
   curl -sS https://getcomposer.org/installer | php \
   && chmod +x composer.phar && mv composer.phar /usr/local/bin/composer
 
-RUN wget https://get.symfony.com/cli/installer -O - | bash
-RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
+#RUN wget https://get.symfony.com/cli/installer -O - | bash
+#RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
 RUN npm install -g yarn
